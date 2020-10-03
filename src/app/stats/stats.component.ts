@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  } from 'rxjs';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -10,12 +9,15 @@ import { DataService } from '../services/data.service';
 export class StatsComponent implements OnInit {
   stats:any;
   sus:any;
+  loading:Boolean = false;
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
     
     this.sus = this.data.getData().subscribe((data)=>{
+      this.loading = true;
       this.stats = data;
+      this.loading = false;
     })
   }
   ngOnDestroy(){

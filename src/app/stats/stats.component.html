@@ -1,5 +1,8 @@
-<div class="container mt-5" style="height: '400px'; overflow: 'auto'">
-    <table class="table table-hover">
+<div class="container mt-5" style="height: '400px'; overflow: 'auto'" >
+    <div class="spinner-border ml-auto mr-auto" role="status" *ngIf="loading">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <table class="table table-hover" *ngIf="!loading">
         <thead class="sticky-table">
             <tr>
                 <th scope="col">#</th>
@@ -8,7 +11,7 @@
                 <th scope="col">Handle</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
             <tr *ngFor="let stat of stats">
                 <th scope="row">{{stat.id}} </th>
                 <td>{{stat.title}}</td>
@@ -17,4 +20,5 @@
             </tr>
         </tbody>
     </table>
+    
 </div>
