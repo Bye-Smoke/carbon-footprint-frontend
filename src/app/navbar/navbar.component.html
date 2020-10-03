@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><img src="assets/img/huella-de-carbono.png" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy"></a>
+    <a class="navbar-brand" routerLink="/"><img src="assets/img/huella-de-carbono.png" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto mr-auto">
         <li class="nav-item active">
-          <button ctype="button" class="btn btn-link" (click)="MapOnClick()"><img src="assets/img/mapa.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy"></button>
+          <button ctype="button" class="btn btn-link" routerLink="/" (click)="MapOnClick()"><img src="assets/img/mapa.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy"></button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-link" (click)="StatisticsOnClick()"><img src="assets/img/statistics.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy"></button>
+          <button type="button" class="btn btn-link" routerLink="/stats" (click)="StatisticsOnClick()"><img src="assets/img/statistics.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy"></button>
         </li>
       </ul>
     </div>
