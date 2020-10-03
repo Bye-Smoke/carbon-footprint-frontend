@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  } from 'rxjs';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -8,12 +9,17 @@ import { DataService } from '../services/data.service';
 })
 export class StatsComponent implements OnInit {
   stats:any;
+  sus:any;
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
-    this.data.getData().subscribe((data)=>{
+    
+    this.sus = this.data.getData().subscribe((data)=>{
       this.stats = data;
     })
+  }
+  ngOnDestroy(){
+    this.sus.unsuscribe();
   }
 
 }
