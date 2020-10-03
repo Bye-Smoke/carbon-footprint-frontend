@@ -20,8 +20,5 @@ export class StatsComponent implements OnInit {
       this.loading = false;
     })
   }
-  ngOnDestroy(){
-    this.sus.unsuscribe();
-  }
 
 }
