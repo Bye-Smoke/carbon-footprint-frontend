@@ -1,0 +1,11 @@
+.overflow-table{
+    height: 400 px;
+    overflow: auto;
+}
+.sticky-table{
+    position: sticky;
+    top: 0;
+    color: red;
+    background-color: #fff7f7;
+    position: -webkit-sticky;
+}
