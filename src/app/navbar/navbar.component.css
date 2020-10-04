@@ -1,4 +1,10 @@
 .alingtext{
     color: white;
     padding-left: 1rem;
+    font-family: cursive;
+}
+
+.nav-image{
+    padding-right: 50%;
+    padding-left: 50%;
 }
