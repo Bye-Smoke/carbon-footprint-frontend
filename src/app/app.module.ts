@@ -8,13 +8,15 @@ import { StatsComponent } from './stats/stats.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MapComponent } from './map/map.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     StatsComponent,
-    MapComponent
+    MapComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
