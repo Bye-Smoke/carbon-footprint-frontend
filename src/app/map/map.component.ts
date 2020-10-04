@@ -11,8 +11,8 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public SudClick(event):void{
-    console.log(event.target.title)
+  public continentClick(event):void{
+    console.log(event.target.id)
   }
 
 }
