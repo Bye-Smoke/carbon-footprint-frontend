@@ -1,0 +1,9 @@
+.id{
+    align-items: center;
+    border-radius: 30px;
+    border-color: blue;
+    padding: 0;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
