@@ -7,4 +7,9 @@
 
 .map__image path:hover{
     fill: slategrey;
+    
+}
+
+path:hover{
+    cursor: pointer;
 }

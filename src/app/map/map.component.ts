@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  public nameContinent:String = "";
 
   constructor() { }
 
   ngOnInit(): void {
   }
   public continentClick(event):void{
+    this.nameContinent = event.target.id
     console.log(event.target.id)
   }
 
