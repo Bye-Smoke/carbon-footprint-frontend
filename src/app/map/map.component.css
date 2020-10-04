@@ -1,0 +1,10 @@
+.map__image path{
+    fill: skyblue;
+    stroke: FFF;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+
+.map__image path:hover{
+    fill: slategrey;
+}
