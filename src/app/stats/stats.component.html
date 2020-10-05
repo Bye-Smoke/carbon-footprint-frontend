@@ -12,11 +12,11 @@
             </tr>
         </thead>
         <tbody >
-            <tr *ngFor="let stat of stats">
-                <th scope="row">{{stat.id}} </th>
-                <td>{{stat.title}}</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+            <tr *ngFor="let stat of stats; index as i">
+                <th scope="row">{{ i + 1}} </th>
+                <td> {{stat.name}} </td>
+                <td> {{stat.mtco2}} </td>
+                <td>{{stat.temperature}}</td>
             </tr>
         </tbody>
     </table>

@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  url: string = "https://jsonplaceholder.typicode.com/";
+  url: string = "http://localhost:8000/api/continent/";
 
   constructor(private http:HttpClient) { }
 
   getData():Observable<any>{
-    return this.http.get<any>(`${this.url}posts`)
+    return this.http.get<any>(`${this.url}`)
   }
 }
