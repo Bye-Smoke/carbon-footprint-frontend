@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observer, Subscription } from 'rxjs';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -7,18 +8,30 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./stats.component.css']
 })
 export class StatsComponent implements OnInit {
-  stats:any;
-  sus:any;
-  loading:Boolean = false;
-  constructor(private data:DataService) { }
+  stats: any;
+  subscription: Subscription;
+  observer: Observer<any>;
+  loading: Boolean = false;
+  error: any = ""
+  constructor(private data: DataService) {
+    this.observer = {
+      next: (data) => {
+        this.loading = true;
+        this.stats = data;
+        this.loading = false;
+      },
+      error: (error) => {
+        this.error = error
+      },
+      complete: () => { }
+    }
+  }
 
   ngOnInit(): void {
-    
-    this.sus = this.data.getData().subscribe((data)=>{
-      this.loading = true;
-      this.stats = data;
-      this.loading = false;
-    })
+    this.subscription = this.data.getData().subscribe(this.observer)
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
   }
 
 }

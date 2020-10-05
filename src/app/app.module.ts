@@ -9,6 +9,7 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MapComponent } from './map/map.component';
 import { InfoComponent } from './info/info.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfoComponent } from './info/info.component';
     NavbarComponent,
     StatsComponent,
     MapComponent,
-    InfoComponent
+    InfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
