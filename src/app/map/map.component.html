@@ -1,5 +1,6 @@
 <div class="container mt-5">
-    <div class="map" id="map">
+  <h3>Global carbon footprint</h3>
+    <div class="map mt-5" id="map">
         <div class="map__image">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 800">
                 
@@ -20,15 +21,26 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Huella de carbono</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Carbon Footprint</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Continente: {{nameContinent}}
-          <br>
-          Huella de carbono promedio = 50%
+          <p>Continent: {{nameContinent}}</p>
+          <p>Carbon printfoot: {{carbonLevel}}</p>
+          <p>Temperature: {{temperature}}</p>
+          <div class="row">
+            <div class="col" *ngIf="happy">
+              <img src="assets/img/like.png" style="width: 30px;height: 30px;" alt="">
+            </div>
+            <div class="col" *ngIf="sad">
+              <img src="assets/img/dislike.png" alt="" style="width: 30px;height: 30px;">
+            </div>
+            <div class="col" *ngIf="medium">
+              <img src="assets/img/stop.png" alt="" style="width: 30px;height: 30px;">
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

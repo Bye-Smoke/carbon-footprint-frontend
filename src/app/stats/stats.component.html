@@ -1,8 +1,6 @@
 <div class="container mt-5" style="height: '400px'; overflow: 'auto'" >
-    <div class="spinner-border ml-auto mr-auto" role="status" *ngIf="loading">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <table class="table table-hover" *ngIf="!loading">
+    <h3>Ranking Stats</h3>
+    <table class="table table-hover mt-5" *ngIf="!loading">
         <thead class="sticky-table">
             <tr>
                 <th scope="col">#</th>
@@ -12,7 +10,7 @@
             </tr>
         </thead>
         <tbody >
-            <tr *ngFor="let stat of stats; index as i">
+            <tr *ngFor="let stat of continent; index as i">
                 <th scope="row">{{ i + 1}} </th>
                 <td> {{stat.name}} </td>
                 <td> {{stat.mtco2}} </td>
