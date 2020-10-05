@@ -46,7 +46,7 @@ export class MapComponent implements OnInit {
     }
     const f = async()=>{
       this.carbonLevel = await Math.random()*100;
-      this.temperature = Math.random()*100;
+      this.temperature = await Math.random()*100;
     }
     f();
     
